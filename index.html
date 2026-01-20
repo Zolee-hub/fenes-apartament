@@ -43,6 +43,13 @@
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     }
+    .gallery-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #6b5b2e;
+      text-align: center;
+    }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -76,8 +83,24 @@
       z-index: 999;
       display: none;
     }
+    /* Mobilra optimalizált fix hívó gomb */
     @media (max-width: 768px) {
       .btn-sticky { display: inline-block; }
+      .btn-fixed-call {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        background: #c2a875;
+        color: white;
+        padding: 14px 28px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        display: inline-block;
+      }
     }
     footer {
       background: #333;
@@ -97,7 +120,7 @@
 
 <section class="intro">
   <h2>Apartament de închiriat – termen lung</h2>
-  <p><strong>✨ Apartament nou cu 2 camere, balcon generos și parcare subterană – prima închiriere, pe termen lung, direct de la proprietar! ✨</strong></p>
+  <p><strong>✨Apartament nou cu 2 camere, balcon generos și parcare subterană – prima închiriere, pe termen lung, direct de la proprietar!✨</strong></p>
   <p><strong>FĂRĂ COMISION!</strong></p>
   <p>
     Persoană fizică oferă spre prima închiriere, exclusiv pe termen lung, un apartament modern cu 2 camere,
@@ -134,21 +157,21 @@
 </section>
 
 <section>
- <div class="gallery">
-  <img src="images/kep1.jpg" alt="Living" />
-  <img src="images/kep2.jpg" alt="Living" />
-  <img src="images/kep3.jpg" alt="Dormitor" />
-  <img src="images/kep4.jpg" alt="Dormitor" />
-  <img src="images/kep5.jpg" alt="Bucătărie" />
-  <img src="images/kep6.jpg" alt="Bucătărie" />
-  <img src="images/kep7.jpg" alt="Baie" />
-  <img src="images/kep8.jpg" alt="Baie" />
-  <img src="images/kep9.jpg" alt="Balcon" />
-  <img src="images/kep10.jpg" alt="Vedere" />
-  <img src="images/kep11.jpg" alt="Exterior" />
-  <img src="images/kep12.jpg" alt="Împrejurimi" />
-</div>
-
+  <div class="gallery-title">Galerie foto</div>
+  <div class="gallery">
+    <img src="images/kep1.jpg" alt="Living" />
+    <img src="images/kep2.jpg" alt="Living" />
+    <img src="images/kep3.jpg" alt="Dormitor" />
+    <img src="images/kep4.jpg" alt="Dormitor" />
+    <img src="images/kep5.jpg" alt="Bucătărie" />
+    <img src="images/kep6.jpg" alt="Bucătărie" />
+    <img src="images/kep7.jpg" alt="Baie" />
+    <img src="images/kep8.jpg" alt="Baie" />
+    <img src="images/kep9.jpg" alt="Balcon" />
+    <img src="images/kep10.jpg" alt="Vedere" />
+    <img src="images/kep11.jpg" alt="Exterior" />
+    <img src="images/kep12.jpg" alt="Împrejurimi" />
+  </div>
 </section>
 
 <section>
@@ -167,7 +190,8 @@
   <p>📞 Telefon: 0745149718</p>
 </section>
 
-<a href="tel:0745149718" class="btn btn-sticky">📞 Sună acum</a>
+<!-- Mobilon fixen látható hívó gomb -->
+<a href="tel:0745149718" class="btn-fixed-call">📞 Sună acum</a>
 
 <footer>
   <p>© 2026 Fenes-i apartament – Toate drepturile rezervate</p>
@@ -175,4 +199,3 @@
 
 </body>
 </html>
-
